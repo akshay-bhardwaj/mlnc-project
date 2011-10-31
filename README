@@ -1,0 +1,4 @@
+1. Pass first half of unsorted data set. For optimisation perspective : Sort the data based on output ([0,1]) and then take first half of both sorted(0) and sorted(1)
+2. While passing parameters from TrainClassifier to Classifier, pass following params:
+              a. K 
+              b. Distance Matrix (rather then passing the training se)t
