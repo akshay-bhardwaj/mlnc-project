@@ -1,5 +1,5 @@
 %Number of samples to be generated from GenerateData function
-NoOfElements = 50;
+NoOfElements = 500;
 
 %Generate Data for training
 [outputs, inputs] = GenerateData(NoOfElements);
@@ -21,7 +21,7 @@ for i = 1:length(TestInputs)
 end
 
 
-MeanSqErrorTheta = sqrt(SqErrorTheta)/NoOfElements;
+MeanSqErrorTheta = sqrt(SqErrorTheta/NoOfElements);
 
 
 
