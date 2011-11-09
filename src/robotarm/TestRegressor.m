@@ -4,7 +4,8 @@ function output = TestRegressor( parameters, input )
 %   Train Regressor.
 %   output variable the has the estimated theta1 and theta2
 
-output = parameters'*input;
+inputTrans = [1 input]';
+output = parameters'*inputTrans;
 
 end
 
