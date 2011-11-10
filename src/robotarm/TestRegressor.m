@@ -12,12 +12,14 @@ StdInputs = parameters.SdInputs;
 StdOutputs = parameters.SdOutputs;
 Wml = parameters.Wml; 
 
-ModifiedInput = [0 0];
-ModifiedInput(1) = (input(1) - InputsMean(1))/StdInputs(1);
-ModifiedInput(2) = (input(2) - InputsMean(2))/StdInputs(2);
+% ModifiedInput = [0 0];
+% ModifiedInput(1) = (input(1) - InputsMean(1))/StdInputs(1);
+% ModifiedInput(2) = (input(2) - InputsMean(2))/StdInputs(2);
 
 
-inputTrans = [1, ModifiedInput]';
+% inputTrans = [1, ModifiedInput]';
+inputTrans = [1, PhiGenerator(input)]';
+
 ModifiedOutput = Wml'*inputTrans;
 output = [0 0];
 output(1) = OutputsMean(1) + StdOutputs(1)*ModifiedOutput(1);
