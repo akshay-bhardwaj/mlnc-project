@@ -25,7 +25,7 @@ phi(:,2:(columns+1)) = PhiGenerator(inputs);
 
 %Wml = (phi'*phi)\phi' * outputs; %Wml = inv(phi'*phi)*phi' * outputs;
 ModifiedPhi = phi'*phi; %Used for calcuation of Wml
-lambda = 0.012;
+lambda = 1000;
 parameters.MeanInputs = InputsMean;
 parameters.MeanOutputs = OutputsMean;
 parameters.SdInputs = StdInputs;
