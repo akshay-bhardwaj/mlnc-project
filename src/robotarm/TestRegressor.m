@@ -18,12 +18,14 @@ Wml = parameters.Wml;
 
 
 % inputTrans = [1, ModifiedInput]';
-inputTrans = [1, PhiGenerator(input)]';
-
-ModifiedOutput = Wml'*inputTrans;
-output = [0 0];
-output(1) = OutputsMean(1) + StdOutputs(1)*ModifiedOutput(1);
-output(2) = OutputsMean(2) + StdOutputs(2)*ModifiedOutput(2);
+input
+inputTrans = [1, PhiGeneratorEle(input, InputsMean, StdInputs)]';
+inputTrans
+output = Wml'*inputTrans;
+%ModifiedOutput = Wml'*inputTrans;
+%output = [0 0];
+%output(1) = OutputsMean(1) + StdOutputs(1)*ModifiedOutput(1);
+%output(2) = OutputsMean(2) + StdOutputs(2)*ModifiedOutput(2);
 
 %inputTrans = [1 input]';
 %output = parameters'*inputTrans;

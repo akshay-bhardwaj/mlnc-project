@@ -6,7 +6,7 @@ NoOfElements = 500;
 
 %Use generated data for training
 parameters = TrainRegressor(inputs, outputs);
-
+parameters.Wml
 %Generate data for Testion;
 [TestOutputs, TestInputs] = GenerateData(NoOfElements);
 
